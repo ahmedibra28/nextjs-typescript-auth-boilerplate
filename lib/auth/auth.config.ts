@@ -7,7 +7,6 @@ export default {
   basePath: "/api/auth",
   providers: [GitHub, Google],
   pages: {
-    // signIn: "/signin",
-    // signOut: "/signout",
+    signIn: "/sign-in",
   },
 } satisfies NextAuthConfig;

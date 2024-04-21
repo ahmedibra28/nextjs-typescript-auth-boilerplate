@@ -4,9 +4,14 @@ import { Button } from "@/components/ui/button";
 import { FaGithub, FaGoogle, FaSpinner } from "react-icons/fa";
 import { useTransition } from "react";
 import { SingInWithGitHub, SingInWithGoogle } from "@/server/actions";
+import Error from "@/components/error";
+import { useSearchParams } from "next/navigation";
 
 export default function SignInPage() {
   const [isPending, startTransition] = useTransition();
+
+  const searchParams = useSearchParams();
+  const error = searchParams.get("error");
 
   const onSubmit = (state: string) => {
     startTransition(() => {
@@ -60,6 +65,8 @@ export default function SignInPage() {
           Sign in with Github
         </Button>
       </div>
+
+      {error && <Error error={error} />}
     </div>
   );
 }
