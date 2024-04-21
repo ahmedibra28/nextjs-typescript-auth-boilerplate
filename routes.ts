@@ -10,7 +10,7 @@ export const publicRoutes = ["/"];
  * These routes will redirect logged in users to homepage
  * @type {string[]}
  */
-export const authRoutes = ["/signin"];
+export const authRoutes = ["/sign-in"];
 
 /**
  * The prefix for API authentication routes

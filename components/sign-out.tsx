@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { signOut } from "@/lib/auth/auth";
+import { FaPowerOff } from "react-icons/fa";
 
 export function SignOut() {
   return (
@@ -9,9 +9,9 @@ export function SignOut() {
         await signOut();
       }}
     >
-      <Button variant="destructive" type="submit">
-        Sign Out
-      </Button>
+      <button type="submit" className="flex flex-row items-center gap-2">
+        <FaPowerOff /> <span>Sign out</span>
+      </button>
     </form>
   );
 }
