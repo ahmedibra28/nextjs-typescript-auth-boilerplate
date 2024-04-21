@@ -1,4 +1,4 @@
-# Next.js TypeScript Boilerplate
+# Next.js TypeScript + Next Auth + Prisma Boilerplate
 
 This is a boilerplate project for building web applications using Next.js, Prisma, PostgreSQL, Shadcn/ui, Google & GitHub auth, and Next Auth v5. It provides a solid foundation for developing modern and scalable web applications.
 
@@ -19,13 +19,13 @@ To get started with this boilerplate, follow the steps below:
 1. Clone the repository to your local machine:
 
 ```shell
-git clone https://github.com/ahmedibra28/nextjs-typescript-boilerplate.git
+git clone https://github.com/ahmedibra28/nextjs-typescript-auth-boilerplate.git
 ```
 
 2. Install the dependencies:
 
 ```shell
-cd nextjs-typescript-boilerplate
+cd nextjs-typescript-auth-boilerplate
 pnpm install
 ```
 
