@@ -66,27 +66,29 @@ const Navigation = async () => {
   );
 
   return (
-    <header className="flex h-16 items-center justify-between border-b px-4 md:px-6">
-      <Link className="flex items-center" href="/">
-        <MountainIcon className="size-8" />
-        <span className="sr-only">Acme Inc</span>
-      </Link>
+    <div className="border-b">
+      <header className="container flex h-16 items-center justify-between px-4 md:px-6">
+        <Link className="flex items-center" href="/">
+          <MountainIcon className="size-8" />
+          <span className="sr-only">Acme Inc</span>
+        </Link>
 
-      {!session?.user && (
-        <ul className="flex items-center space-x-4 px-1">
-          <li>
-            <ModeToggle />
-          </li>
-          <li>
-            <Link href="/sign-in">
-              <Button>Sign In</Button>
-            </Link>
-          </li>
-        </ul>
-      )}
+        {!session?.user && (
+          <ul className="flex items-center space-x-4 px-1">
+            <li>
+              <ModeToggle />
+            </li>
+            <li>
+              <Link href="/sign-in">
+                <Button>Sign In</Button>
+              </Link>
+            </li>
+          </ul>
+        )}
 
-      {session?.user && authItems}
-    </header>
+        {session?.user && authItems}
+      </header>
+    </div>
   );
 };
 
