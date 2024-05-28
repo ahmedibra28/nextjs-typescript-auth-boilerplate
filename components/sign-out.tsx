@@ -6,7 +6,10 @@ export function SignOut() {
     <form
       action={async () => {
         "use server";
-        await signOut();
+        await signOut({
+          redirect: true,
+          redirectTo: "/",
+        });
       }}
     >
       <button type="submit" className="flex flex-row items-center gap-2">
