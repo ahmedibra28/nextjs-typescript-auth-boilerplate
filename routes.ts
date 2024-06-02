@@ -3,7 +3,7 @@
  * These routes do not require authentication
  * @type {string[]}
  */
-export const publicRoutes = ["/"];
+export const publicRoutes = ["/", "/docs"];
 
 /**
  * An array of route that are used for authentication
@@ -18,6 +18,13 @@ export const authRoutes = ["/sign-in"];
  * @type {string}
  */
 export const apiAuthPrefix = "/api/auth";
+
+/**
+ * The prefix for client API authentication routes
+ * Routes that start with this prefix are used for client API authentication purposes
+ * @type {string}
+ */
+export const apiClientPrefix = "/api/v1/public/transactions";
 
 /**
  * The default redirect path after logging in
